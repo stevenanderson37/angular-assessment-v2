@@ -1,13 +1,20 @@
         <!--pet Image-->
         <!--pet Image click collapse the image-->
-        <div id={{pet.id}}>
-          <a class="pet-grid__pet" >
+        <!-- <div id={{pet.id}}> -->
+          <!-- jQuery used for click -->
+          <!-- <a class="pet-grid__pet" >
               <img src={{pet.image}} class="pet-grid__img cursor image{{pet.id}}" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
           </a>
           <a class="pet-grid__pet cursor showimage{{pet.id}}" style="display: none;">
               show image
           </a>
-        </div>
+        </div> -->
+        <a class="product-grid__product cursor" ng-show="!showImg" ng-click="showImg = true">
+            <img src={{pet.image}} class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="" />
+        </a>
+        <a class="product-grid__product cursor" ng-show="showImg" ng-click="showImg = false">
+            show image
+        </a>
 
         <!--pet Meta-->
         <div class="pet-grid__meta">
